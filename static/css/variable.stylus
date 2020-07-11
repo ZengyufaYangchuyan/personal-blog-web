@@ -1,0 +1,38 @@
+// 背景主题色
+$themaBackground = #f4f4f4
+// 博客栏色
+$blogBackground = #f6f6f6
+/**
+* 博客相关样式
+*/
+$blogTitleColor = #20bebf
+$blogTitleTextShadowColor = #7d7878
+$blogTagTextColor = #7b7b7b
+$blogContentWidth = 98%
+// 博客边框
+getBlogWindowStyle(windowWidth, windowBackground)
+  width windowWidth
+  margin 25px auto 25px auto
+  background windowBackground
+  border-radius 25px
+  box-shadow 1px 1px 5px 1px #bfb5b5eb
+  transition all .2s
+// 博客标题
+getBlogTitleStyle()
+  color $blogTitleColor
+  text-shadow 1px 1px 1px $blogTitleTextShadowColor
+// 横线
+getLineStyle()
+  width $blogContentWidth
+  height 3px
+  background linear-gradient($themaBackground, transparent) 0 0 / 100% 0px, radial-gradient(at top, rgba(86, 95, 84, 0.6), transparent 70%) 0 0 / 100% 50px
+  margin auto
+  border-radius 50%
+// 博客标签字体
+getTagTextStyle()
+  font-size 13px
+  color $blogTagTextColor
+
+// 基本过渡时长
+getBaseTransitionTime()
+  transition all .2s

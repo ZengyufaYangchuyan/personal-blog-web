@@ -81,6 +81,7 @@ const resolve = {
   alias: {
     vue$: "vue/dist/vue.esm.js",
     pages: setAssetsDir('src/pages'),
+    css: setAssetsDir('static/css'),
     images: setAssetsDir('static/images'),
     sprites: setAssetsDir('static/images/sprites'),
     js: setAssetsDir('static/js'),

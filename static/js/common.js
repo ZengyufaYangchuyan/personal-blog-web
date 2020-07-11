@@ -16,7 +16,7 @@ const common = {
    */
   getToken: () => common.getCookie(common.TOKEN_STRING),
   /**
-   * @function
+   * @function setCookie
    * @description 设置cookie缓存
    * @param {String} k key
    * @param {any} v value
@@ -34,7 +34,7 @@ const common = {
     document.cookie = `${k}=${v}; ${expires}`;
   },
   /**
-   * @function
+   * @function getCookie
    * @description 获取cookie缓存
    * @param {String} k key
    */
@@ -51,11 +51,33 @@ const common = {
     return value;
   },
   /**
-   * @function
+   * @function message
    * @description 提示消息（后续可根据项目样式框架，调用对应的消息提示框）
    */
   message: (msg) => {
     console.log(msg);
+  },
+  /**
+   * @function sortArray
+   * @description 根据给定排序模式，排序数组
+   * @param {Array} object.data 数组型数据
+   * @param {Boolean} object.isDownSort 是否为降序排序，默认为升序
+   * @param {String} object.objectArrayDataSortKey 对象排序时，根据某个属性进行排序
+   */
+  sortArray: ({data, isDownSort = false, objectArrayDataSortKey = ''}) => {
+    const sortData = data.sort((prev, next) => {
+      let a = prev, b = next;
+      if (typeof prev === 'object' && typeof next === 'object' && objectArrayDataSortKey) {
+        a = prev[objectArrayDataSortKey];
+        b = next[objectArrayDataSortKey];
+      }
+      let sortMode = a - b;
+      if (isDownSort) {
+        sortMode = b - a;
+      }
+      return sortMode;
+    });
+    return sortData;
   }
 };
 

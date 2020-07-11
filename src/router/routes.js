@@ -1,6 +1,9 @@
-import home from 'pages/home';
+import index from 'pages';
 import notFound from 'pages/notFound';
-import moduleOneRouter from 'pages/moduleOne/router';
+import mineRouter from 'pages/mine/router';
+import blogRouter from 'pages/blog/router';
+import historyRouter from 'pages/history/router';
+import articleRouter from 'pages/article/router';
 
 /**
  * 路由配置
@@ -12,9 +15,12 @@ const routes = [
   },
   {
     path: '/home',
-    component: home,
+    component: index,
     children: [
-      moduleOneRouter
+      ...mineRouter,
+      ...blogRouter,
+      ...historyRouter,
+      ...articleRouter
     ]
   },
   {

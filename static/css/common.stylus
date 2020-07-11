@@ -1,0 +1,40 @@
+@import '~css/variable.stylus'
+
+*
+  margin 0
+  padding 0
+html,body
+  width 100%
+  height 100%
+html
+  font-size 16px
+body
+  margin unset
+  background $themaBackground
+li
+  list-style none
+
+// 文字超出显示...
+.text-ellipsis
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+
+::-webkit-scrollbar
+  width: 8px
+  height: 8px
+  background-color: transparent
+
+::-webkit-scrollbar-track
+  border-radius: 8px
+  background-color: transparent
+  box-shadow: 0 0 1px $color-3 inset
+
+::-webkit-scrollbar-thumb
+  border-radius: 8px
+  background-color: rgba(96,126,121,0.65)
+
+::selection {
+  background: $color-3;
+  color: $color-1;
+}

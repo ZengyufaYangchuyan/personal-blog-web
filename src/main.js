@@ -1,5 +1,9 @@
 import Vue from 'vue';
 
+// eslint-disable-next-line no-unused-vars
+import commonCSS from 'css/common.stylus';
+// eslint-disable-next-line no-unused-vars
+import iconfontCSS from 'css/icon-font.stylus';
 /**
  * plugins
  * @description vue中使用到的插件
