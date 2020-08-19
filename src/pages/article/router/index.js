@@ -1,4 +1,4 @@
-import index from '../pages';
+// import index from '../pages';
 // import pageOne from '../pages/pageOne';
 // import pageTwo from '../pages/pageTwo';
 // import pageThree from '../pages/pageThree';
@@ -6,7 +6,7 @@ import index from '../pages';
 const router = [
   {
     path: 'article',
-    component: index,
+    component: () => import('../pages'),
     children: [
       // {
       //   path: '',

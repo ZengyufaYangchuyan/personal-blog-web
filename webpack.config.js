@@ -167,6 +167,13 @@ const runtimeChunk = {
   name: 'manifest'
 };
 
+/**
+ * 不要遵循/打包这些模块，而是在运行时从环境中请求他们
+ */
+const externals = {
+  vue: 'Vue'
+};
+
 let config = {
   mode,
   devtool,
@@ -181,7 +188,8 @@ let config = {
   optimization: {
     splitChunks,
     runtimeChunk
-  }
+  },
+  externals
 };
 
 module.exports = config;

@@ -1,5 +1,5 @@
-import index from '../pages';
-import blogDetail from '../pages/blogDetail';
+// import index from '../pages';
+// import blogDetail from '../pages/blogDetail';
 // import pageTwo from '../pages/pageTwo';
 // import pageThree from '../pages/pageThree';
 
@@ -10,7 +10,7 @@ const router = [
   },
   {
     path: 'blog',
-    component: index,
+    component: () => import('../pages'),
     children: [
       // {
       //   path: '',
@@ -28,7 +28,7 @@ const router = [
   },
   {
     path: 'blog-detail',
-    component: blogDetail
+    component: () => import('../pages/blogDetail')
   }
 ];
 
